@@ -1,0 +1,74 @@
+[viewBag]
+==
+function onStart()
+{
+$this['bhash'] = time();
+}
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{ this.page.title }}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="keywords" content="{{ description }}">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-control" content="no-cache">
+
+    <!-- Favicon -->
+
+    <link rel="icon" type="image/ico" href="{{'assets/img/favicon.png?v=2'|theme }}">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{'assets/img/favicons/apple-touch-icon-57x57.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{'assets/img/favicons/apple-touch-icon-60x60.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{'assets/img/favicons/apple-touch-icon-72x72.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{'assets/img/favicons/apple-touch-icon-76x76.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{'assets/img/favicons/apple-touch-icon-114x114.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{'assets/img/favicons/apple-touch-icon-120x120.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{'assets/img/favicons/apple-touch-icon-144x144.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{'assets/img/favicons/apple-touch-icon-152x152.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{'assets/img/favicons/apple-touch-icon-180x180.png?v=vMMxr5QWlk'|theme }}">
+    <link rel="icon" type="image/png" href="{{'assets/img/favicons/favicon-32x32.png?v=vMMxr5QWlk'|theme }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{'assets/img/favicons/favicon-194x194.png?v=vMMxr5QWlk'|theme }}" sizes="194x194">
+    <link rel="icon" type="image/png" href="{{'assets/img/favicons/favicon-96x96.png?v=vMMxr5QWlk'|theme }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{'assets/img/favicons/android-chrome-192x192.png?v=vMMxr5QWlk'|theme }}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{'assets/img/favicons/favicon.png?v=vMMxr5QWlk'|theme }}" sizes="16x16">
+    <link rel="manifest" href="{{'assets/img/favicons/manifest.json?v=vMMxr5QWlk'|theme }}">
+    <link rel="mask-icon" href="{{'assets/img/favicons/safari-pinned-tab.svg?v=vMMxr5QWlk'|theme }}" color="#0c3e58">
+    <link rel="shortcut icon" href="{{'assets/img/favicons/favicon.ico?v=vMMxr5QWlk'|theme }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=vMMxr5QWlk">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="{{'assets/vendor/bootstrap/bootstrap.min.css'|theme }}">
+    <!-- CSS Global Icons -->
+    <link rel="stylesheet" href="{{'assets/vendor/icon-awesome/css/font-awesome.min.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/icon-line/css/simple-line-icons.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/icon-etlinefont/style.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/icon-line-pro/style.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/icon-hs/style.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/dzsparallaxer/dzsparallaxer.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/dzsparallaxer/dzsscroller/scroller.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/dzsparallaxer/advancedscroller/plugin.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/animate.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/fancybox/jquery.fancybox.min.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/slick-carousel/slick/slick.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/typedjs/typed.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/hs-megamenu/src/hs.megamenu.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/vendor/hamburgers/hamburgers.min.css'|theme }}">
+
+    <!-- CSS Unify -->
+    <link rel="stylesheet" href="{{'assets/css/unify-core.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/css/unify-components.css'|theme }}">
+    <link rel="stylesheet" href="{{'assets/css/unify-globals.css'|theme }}">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="{{'assets/css/custom.css'|theme }}">

@@ -1,0 +1,125 @@
+description = "Multirow"
+
+[staticMenu]
+
+[staticPage]
+useContent = 0
+default = 1
+==
+{% partial 'site/head_default' %}
+
+
+<body>
+<main>
+
+{#
+    {_variable name="sections" type="repeater" prompt="Add another section" tab="Sections" placement="secondary" groups="themes/unify/meta/repeater_fields.yaml"}{/variable}
+#}
+    {variable name="chunks" type="repeater" prompt="Add Content Chunk" tab="Content Chunks" placement="secondary" groups="themes/unify/meta/chunks.yaml"}{/variable}
+
+    <!-- Header -->
+    {% partial 'site/header_default' %}
+    <!-- End Header -->
+
+
+    {% for chunk in chunks %}
+          {% filter parseSnippets %}   {# Plugin Richeditor Snippets#}
+        {# Paralax #}
+        {% if chunk._group == "paralaxer" %}
+            {% partial 'chunks/paralaxer-video' chunk=chunk %}
+        {% endif %}
+        {% if chunk._group == "paralax-section" %}
+            {% partial 'chunks/paralax-section' chunk=chunk %}
+        {% endif %}
+
+        {% if chunk._group == "textcontent" %}
+            {% partial 'chunks/text' chunk=chunk %}
+        {% endif %}
+
+        {% if chunk._group == "cta-2-centered" %}
+            {% partial 'chunks/cta-2-centered' chunk=chunk %}
+        {% endif %}
+
+        {% if chunk._group == "cta-4-simple" %}
+            {% partial 'chunks/cta-4-simple' chunk=chunk %}
+        {% endif %}
+
+         {% if chunk._group == "latest-topics" %}
+            {% partial 'chunks/topics' chunk=chunk %}
+        {% endif %}
+
+          {% if chunk._group == "banner-header" %}
+            {% partial 'chunks/banner-header' chunk=chunk %}
+        {% endif %}
+
+        {% if chunk._group == "cta-paralax-modal-video" %}
+            {% partial 'chunks/cta-paralax-modal-video' chunk=chunk %}
+        {% endif %}
+
+        {% if chunk._group == "page" %}
+            <section class="container g-pt-10 g-pb-10">
+                {% page %}
+            </section>
+        {% endif %}
+
+
+        {% endfilter %}
+
+    {% endfor %}
+
+    <!-- -->
+
+    <!--
+
+    {% for section in sections %}
+    {% if section._group == "title" %}
+    <h2 class="section__title">{{ section.title }}</h2>
+    {% endif %}
+    {% if section._group == "subtitle" %}
+    <h3 class="section__subtitle dark clear bg-white text-libre">{{ section.subtitle }}</h3>
+    {% endif %}
+    {% if section._group == "content" %}
+    <div class="section__content">
+        <div class="section__content__paragraph  {% if section.text_area_position != " none
+        " %}flc-{{ section.text_area_position }}{% endif %}">{{ section.text_area|raw }}
+    </div>
+    {% if section.text_area_image != "" %}<img class="section__content__image" src="{{ section.text_area_image|media }}"/>{% endif %}
+
+    </div>
+    {% endif %}
+    {% if section._group == "Sous-titre" %}
+    <div class="section__content">
+        <div class="section__content__paragraph  {% if section.text_area_position != " none
+        " %}flc-{{ section.text_area_position }}{% endif %}">{{ section.text_area|raw }}
+    </div>
+    {% if section.text_area_image != "" %}<img class="thumbnail section__content__image" src="{{ section.text_area_image|media }}"/>{% endif %}
+
+    </div>
+    {% endif %}
+    ....
+    {% endfor %}
+
+-->
+
+
+    <!-- Footer -->
+    {% partial 'site/footer' %}
+    <!-- End Footer -->
+
+
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+        <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+</main>
+
+<div class="u-outer-spaces-helper"></div>
+
+{% partial 'site/scripts-footer' %}
+
+
+</body>
+
+</html>

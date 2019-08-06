@@ -1,0 +1,65 @@
+paralaxer:
+  name: Paralaxer
+  description: 'Promo Paralaxer'
+  icon: icon-leaf
+  fields:
+    text_1:
+      label: 'Teasertext 1'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: left
+    text_2:
+      label: 'Teasertext 2'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: right
+    bg_image:
+      label: Hintergrundbild
+      commentAbove: 'Paralax Hintergrund'
+      type: mediafinder
+      mode: image
+      span: left
+      imageWidth: 40%
+    youtube_embed_url:
+      label: Video
+      commentAbove: 'Youtube Embed-Link'
+      type: text
+      span: right
+page:
+  name: 'Position Default Content'
+  description: 'Position von Standard-Editor Content'
+  icon: icon-arrows-v
+  fields:
+    info:
+      label: 'Standard Page Content'
+      prompt: 'Nur zum Verschieben'
+      commentAbove: 'An Position dieser Sektion erscheint der Inhalt aus dem Editor im Tab Content. Zweck dieses Elements ist es die Position an welcher der Content angezeigt wird zu bestimmen'
+      content: {name: 'Contenu textuel', description: Textarea, icon: icon-paragraph, fields: {text_area: {label: Contenu, type: richeditor, toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen, size: huge, span: full}, text_area_position: {label: 'Position du contenu sur la page', type: radio, span: left, default: none, options: {none: [Aucune, 'Le contenu prendra toute la largeur de la page.'], left: ['Aligné à gauche', 'Le contenu sera placé à gauche des autres éléments.'], right: ['Aligné à droite', 'Le contenu sera placé à droite des autres éléments.']}}, text_area_image: {label: 'Affiche une image liée', commentAbove: 'Si vous souhaitez ajouté une image à ce contenu, merci de l''ajouter ici', type: mediafinder, mode: image, span: right, imageWidth: 40%}}}
+text:
+  name: 'Contenu textuel'
+  description: Textarea
+  icon: icon-paragraph
+  fields:
+    text_area:
+      label: Contenu
+      type: richeditor
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: huge
+      span: full
+    text_area_position:
+      label: 'Position du contenu sur la page'
+      type: radio
+      span: left
+      default: none
+      options: {none: [Aucune, 'Le contenu prendra toute la largeur de la page.'], left: ['Aligné à gauche', 'Le contenu sera placé à gauche des autres éléments.'], right: ['Aligné à droite', 'Le contenu sera placé à droite des autres éléments.']}
+    text_area_image:
+      label: 'Affiche une image liée'
+      commentAbove: 'Si vous souhaitez ajouté une image à ce contenu, merci de l''ajouter ici'
+      type: mediafinder
+      mode: image
+      span: right
+      imageWidth: 40%
+
+

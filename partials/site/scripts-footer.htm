@@ -1,0 +1,77 @@
+
+<!-- JS Global Compulsory -->
+<script src="{{'assets/vendor/jquery/jquery.min.js'|theme }}"></script>
+<script src="{{'assets/vendor/jquery-migrate/jquery-migrate.min.js'|theme }}"></script>
+<script src="{{'assets/vendor/popper.js/popper.min.js'|theme }}"></script>
+<script src="{{'assets/vendor/bootstrap/bootstrap.min.js'|theme }}"></script>
+
+
+<!-- JS Implementing Plugins -->
+<script src="{{'assets/vendor/slick-carousel/slick/slick.js'|theme }}"></script>
+<script src="{{'assets/vendor/hs-megamenu/src/hs.megamenu.js'|theme }}"></script>
+<script src="{{'assets/vendor/dzsparallaxer/dzsparallaxer.js'|theme }}"></script>
+<script src="{{'assets/vendor/dzsparallaxer/dzsscroller/scroller.js'|theme }}"></script>
+<script src="{{'assets/vendor/dzsparallaxer/advancedscroller/plugin.js'|theme }}"></script>
+<script src="{{'assets/vendor/fancybox/jquery.fancybox.min.js'|theme }}"></script>
+<script src="{{'assets/vendor/typedjs/typed.min.js'|theme }}"></script>
+
+<!-- JS Unify -->
+<script src="{{'assets/js/hs.core.js'|theme }}"></script>
+<script src="{{'assets/js/components/hs.carousel.js'|theme }}"></script>
+<script src="{{'assets/js/components/hs.header.js'|theme }}"></script>
+<script src="{{'assets/js/helpers/hs.hamburgers.js'|theme }}"></script>
+<script src="{{'assets/js/components/hs.tabs.js'|theme }}"></script>
+<script src="{{'assets/js/components/hs.popup.js'|theme }}"></script>
+<script src="{{'assets/js/components/text-animation/hs.text-slideshow.js'|theme }}"></script>
+<script src="{{'assets/js/components/hs.go-to.js'|theme }}"></script>
+
+<!-- JS Customization -->
+<script src="{{'assets/js/custom.js'|theme }}"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+
+        // initialization of text animation (typing)
+        $(".u-text-animation.u-text-animation--typing").typed({
+            strings: [
+                "an awesome template",
+                "perfect template",
+                "just like a boss"
+            ],
+            typeSpeed: 60,
+            loop: true,
+            backDelay: 1500
+        });
+    });
+
+    $(window).on('load', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSMegaMenu component
+        $('.js-mega-menu').HSMegaMenu({
+            event: 'hover',
+            pageContainer: $('.container'),
+            breakpoint: 991
+        });
+    });
+
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+    });
+</script>

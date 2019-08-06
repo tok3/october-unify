@@ -1,0 +1,459 @@
+paralaxer:
+  name: Paralax Banner + opt Video
+  description: 'Paralax Banner mit optionalem Youtoube Video'
+  icon: icon-leaf
+  fields:
+    chunk_description:
+      type: section
+      label: Paralax Banner + opt Video
+      comment: Paralax Banner mit optionalem Youtoube Video
+    text_1:
+      label: 'Teasertext 1'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: left
+    text_2:
+      label: 'Teasertext 2'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: right
+    bg_image:
+      label: Hintergrundbild
+      commentAbove: 'Paralax Hintergrund'
+      type: mediafinder
+      mode: image
+      span: left
+      imageWidth: 40%
+    youtube_embed_url:
+      label: Video
+      commentAbove: 'Youtube Embed-Link'
+      type: text
+      span: right
+
+#-------------------------
+
+
+paralax-section:
+  name: Banner/Header
+  description: 'Paralax Image mit Text auf Bild (optional)'
+  icon: icon-arrows-v
+  fields:
+    chunk_description:
+      type: section
+      label: Paralax Image mit Text
+      comment: Paralax Image mit Text auf Bild
+    title:
+      label: 'Überschrift'
+      type: text
+      size: small
+      span: left
+    heading_style:
+      label: Überschrift ist H1
+      type: checkbox
+      comment: Abwählen wenn schon H1 auf Page existiert
+      default: true
+      span: right
+    text:
+      label: 'Text'
+      type: textarea
+      size: small
+      span: full
+    bg_image:
+      label: Hintergrundbild
+      commentAbove: 'Paralax Hintergrund'
+      type: mediafinder
+      mode: image
+      span: full
+      imageWidth: 400
+    font_color:
+      label: 'Schriftfarbe'
+      commentAbove: 'Vorsicht ! '
+      type: colorpicker
+      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
+      size: small
+      span: left
+    brightness:
+      label: 'Img Brightness'
+      commentAbove: 'Bild aufhellen oder abdunkeln'
+      type: dropdown
+      options:
+        60: -40%
+        70: -30%
+        80: -20%
+        90: -10%
+        100: 0%
+        110: 10%
+        120: 20%
+        130: 30%
+        140: 40%
+      default: 100
+      span: right
+
+#-------------------------
+banner-header:
+  name: Centered Heading/Banner
+  description: 'Zentrierter Überschriftenbereicht'
+  icon: icon-retweet
+  fields:
+    chunk_description:
+      type: section
+      label: Centered Heading/Banner
+      comment: 'Zentrierter Überschriftenbereicht'
+    title:
+      label: 'Überschrift'
+      type: text
+      size: small
+      span: left
+    heading_style:
+      label: Überschrift ist H1
+      type: checkbox
+      comment: Abwählen wenn schon H1 auf Page existiert
+      default: true
+      span: right
+    text:
+      label: 'Text'
+      type: textarea
+      size: small
+      span: full
+
+#-------------------------
+cta-paralax-modal-video:
+  name: CTA/Video Modal - Banner
+  description: 'u.a. Modal-Video und Paralax BG'
+  icon: icon-youtube-play
+  fields:
+    chunk_description:
+      type: section
+      label: CTA/Video Modal - Banner
+      comment: 'u.a. Modal-Video und Paralax BG'
+    title:
+      label: 'Überschrift'
+      type: text
+      size: small
+      span: left
+    #heading_style:
+     # label: Überschrift ist H1
+     # type: checkbox
+     # comment: Abwählen wenn schon H1 auf Page existiert
+     # default: true
+     # span: right
+    text:
+      label: 'Text'
+      type: textarea
+      size: small
+      span: left
+    bg_image:
+      label: 'Hintergundbild'
+      commentAbove: 'tip: 1920x1080 '
+      type: mediafinder
+      mode: image
+      span: right
+      imageWidth: 20%
+    v_description:
+      type: section
+      comment: ''
+    video:
+      label: 'Video'
+      comment: 'Embed Link Youtube oder Vimeo'
+      type: text
+      size: small
+      span: left
+    video_hint:
+      label: 'Video Button Hint'
+      comment: 'z.B. "sehen Sie unser Video"'
+      type: text
+      size: small
+      span: right
+    v_description_2:
+      type: section
+      comment: ''
+    btntxt:
+      label: 'Button Text'
+      type: text
+      span: left
+    target:
+      label: 'Target URL'
+      type: text
+      span: right
+    btn_hint:
+      label: 'Button Hint'
+      comment: 'z.B. "*exclusiv bei uns !"'
+      type: text
+      span: left
+    v_description_3:
+      type: section
+      comment: 'Kleine Teaser Bilder über Button z.b. Wappen, Siegel usw'
+    items:
+      type: repeater
+      prompt: Mini Teaser Bilder hinzufügen
+      form:
+        fields:
+          image:
+            label: 'Mini Teaser'
+            commentAbove: ''
+            type: mediafinder
+            mode: image
+            span: center
+            imageWidth: 200
+
+#-------------------------
+page:
+  name: 'Position Default Content'
+  description: 'Position von Standard-Editor Content'
+  icon: icon-hand-paper-o
+  fields:
+    chunk_description:
+      type: section
+      label: Position Default Content
+      comment: An Position dieser Sektion erscheint der Inhalt aus dem Editor im Tab Content. Zweck dieses Elements ist es die Position an welcher der Content angezeigt wird zu bestimmen
+
+#-------------------------
+
+
+cta-4-simple:
+  name: 'CTA Simple'
+  description: 'Simpler CTA mit einer Zeile und Action Button'
+  icon: icon-exclamation
+  fields:
+    chunk_description:
+      type: section
+      label: CTA Simple
+      comment: 'Simpler CTA mit einer Zeile und Action Button'
+    claim:
+      label: 'Text'
+      type: text
+      span: full
+    btntxt:
+      label: 'Button Text'
+      type: text
+      span: left
+    target:
+      label: 'Target URL'
+      type: text
+      span: right
+    style:
+      label: 'Style'
+      type: dropdown
+      options:
+        primary: BG Primary
+        dark: BG Dark
+        gray: BG Light Gray
+        light: Bg Light
+      default: primary
+      span: left
+    bg_image:
+      label: 'Hintergundbild'
+      commentAbove: 'Optional bei Style "BG Primary" und "BG Dark".'
+      type: mediafinder
+      mode: image
+      span: right
+      imageWidth: 20%
+
+ #-------------------------
+
+cta-2-centered:
+  name: 'CTA Centered'
+  description: 'CTA mit Zentriertem Text, Paralax Option'
+  icon: icon-exclamation
+  fields:
+    chunk_description:
+      type: section
+      label: CTA Centered
+      comment: 'CTA mit Zentriertem Text, Paralax Option'
+    title:
+      label: 'Überschrift'
+      type: text
+      span: full
+    claim:
+      label: 'Text'
+      type: textarea
+      toolbarButtons: bold|italic|underline|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: full
+    btntxt:
+      label: 'Button Text'
+      type: text
+      span: left
+    target:
+      label: 'Target URL'
+      type: text
+      span: right
+    style:
+      label: 'Style'
+      type: radio
+      options:
+        light:  '"BG Primary", Heller Hintergrund'
+        paralax: Paralax Image Hintergrund
+        dark:  '"BG Dark", Dunkler Hintergrund oder Paralax Image'
+      default: light
+      span: left
+    bg_image:
+      label: 'Hintergundbild'
+      commentAbove: 'Optional bei Style "BG Primary" und "BG Dark".'
+      type: mediafinder
+      mode: image
+      span: right
+      imageWidth: 20%
+
+#-------------------------
+
+
+
+textcontent:
+  name: 'Text'
+  description: Text volle Breite oder Bild und Text
+  icon: icon-paragraph
+  fields:
+    chunk_description:
+      type: section
+      label: Text
+      comment: 'Text volle Breite oder Bild und Text'
+    'grid/3/10':
+      label: '10'
+      span: storm
+      type: text
+      comment: 'col-sm-1 '
+      cssClass: 'col-sm-offset-6 col-sm-1 last'
+    pagepick2:
+      label: Static Page
+      type: staticpagepicker
+      cssClass: col-sm-5
+      span: storm
+    pagepick:
+      label: Static Page
+      type: staticpagepicker
+      cssClass: 'col-sm-12'
+      span: storm
+    title:
+      label: 'Überschrift'
+      type: richeditor
+      size: small
+      span: full
+    text_area:
+      label: Textinhalt
+      type: richeditor
+      #toolbarButtons: bold|italic|snippets
+  #    toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: huge
+      span: full
+    description_opt:
+      type: section
+      label: Optionen
+    text_area_position:
+      label: 'Bild und Position'
+      type: radio
+      span: left
+      default: none
+      options: {none: [Kein Bild, 'Der Inhalt nimmt die gesamte Breite der Seite ein.'], left: ['Links ausrichten', 'Bild wird links neben Text angezeigt.'], right: ['Rechts ausrichten', 'Bild wird rechts neben Text angezeigt']}
+    text_area_image:
+      label: 'Bild'
+      commentAbove: 'Wenn Sie ein Bild zu diesem Inhalt hinzufügen möchtest, füge es bitte hier hinzu.'
+      type: mediafinder
+      mode: image
+      span: right
+      imageWidth: 40%
+    description_align:
+      type: section
+      label: ''
+      comment: 'Ausrichtung und Abstände'
+    margin_top:
+      label: 'Abstand oben'
+      type: dropdown
+      options:
+        g-mt-10: 10
+        g-mt-15: 15
+        g-mt-20: 20
+        g-mt-30: 30
+        g-mt-40: 40
+        g-mt-50: 50
+        g-mt-60: 60
+      default: g-mt-20
+      cssClass: col-sm-4
+      span: storm
+    margin_bottom:
+      label: 'Abstand unten'
+      type: dropdown
+      options:
+        g-mb-10: 10
+        g-mb-15: 15
+        g-mb-20: 20
+        g-mb-30: 30
+        g-mb-40: 40
+        g-mb-50: 50
+        g-mb-60: 60
+      span: right
+    text_width:
+      label: 'Block Breite'
+      type: dropdown
+      comment: 'col-lg-X'
+      options:
+        col-lg-12: 12
+        col-lg-11: 11
+        col-lg-10: 10
+        col-lg-9: 9
+        col-lg-8: 8
+      default: 12
+      span: left
+
+#-------------------------
+
+latest-topics:
+  name: Topics
+  description: Beliebig viele Items mit Text und Bild, einer Überschrift und Beschreibung (z.B. für Projekte, Themen usw)
+  icon: icon-plus-square-o
+  fields:
+    chunk_description:
+      type: section
+      label: Topics
+      comment: Beliebig viele Items mit Text und Bild, einer Überschrift und Beschreibung (z.B. für Projekte, Themen usw)
+    header_style:
+      label: Überschrift und Text Zentriert
+      type: checkbox
+      comment: aus = links ausgerichtet
+      default: true
+    text_on_image:
+      label: Text auf Bild
+      type: checkbox
+      comment: Bild ist dann Pflicht !
+      default: false
+    title:
+      label: 'Überschrift'
+      type: text
+      size: small
+      span: full
+    teaser:
+      label: 'Text'
+      type: textarea
+      size: small
+      span: full
+    items:
+      type: repeater
+      prompt: Eintrag hinzufügen
+      form:
+        fields:
+          heading:
+            label: Überschrift
+            type: text
+          description:
+            label: 'Text'
+            type: textarea
+            size: small
+          image:
+            label: 'Bild'
+            commentAbove: 'Optional'
+            type: mediafinder
+            mode: image
+            span: left
+            imageWidth: 420
+          action_btn_txt:
+            label: 'Action Button Text'
+            commentAbove: 'Optional, wenn nicht gesetzt kein Button'
+            type: text
+            span: left
+          action_btn_target:
+            label: 'Action Button Target URL'
+            commentAbove: 'Optional'
+            type: text
+            span: right

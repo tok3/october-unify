@@ -1,0 +1,42 @@
+{% if chunk.style == "light" %}
+<div class="shortcode-html">
+    <section class="g-brd-top g-brd-bottom g-brd-gray-light-v4">
+        <div class="container text-center g-py-50--md g-py-20">
+            <h2 class="h2 text-uppercase g-font-weight-300">{{chunk.title|nl2br}}</h2>
+            <p class="lead g-px-100--md g-mb-20">{{chunk.claim|nl2br}}</p>
+            <a class="btn btn-md u-btn-primary rounded-0" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+        </div>
+    </section>
+</div>
+{%endif%}
+
+{% if chunk.style == "paralax" %}
+<div class="shortcode-html">
+    <section class="dzsparallaxer auto-init height-is-based-on-content use-loading g-mb-40" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+        <div class="divimage dzsparallaxer--target w-100 g-bg-repeat" style="height: 200%; background-image: url({{ chunk.bg_image|media}})"></div>
+
+        <div class="container text-center g-py-50--md g-py-20">
+            <h2 class="h2 text-uppercase g-font-weight-300">{{chunk.title|nl2br}}</h2>
+            <p class="lead g-px-100--md g-mb-20">{{chunk.claim|nl2br}}</p>
+            <a class="btn btn-md u-btn-primary rounded-0" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+        </div>
+    </section>
+</div>
+{%endif%}
+
+
+{% if chunk.style == "dark" %}
+<!-- dark -->
+
+<div class="shortcode-html">
+    <section class="dzsparallaxer auto-init height-is-based-on-content use-loading g-mb-40" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+        <div class="divimage dzsparallaxer--target w-100 g-bg-repeat" style="height: 200%; background-image: url({{ chunk.bg_image|media}}"></div>
+
+        <div class="container text-center g-color-white g-py-50--md g-py-20">
+            <h2 class="h2 text-uppercase g-font-weight-300">{{chunk.title|nl2br}}</h2>
+            <p class="lead g-px-100--md g-mb-20">{{chunk.claim|nl2br}}</p>
+            <a class="btn btn-md u-btn-primary rounded-0" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+        </div>
+    </section>
+</div>
+{%endif%}

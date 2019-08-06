@@ -1,0 +1,24 @@
+[viewBag]
+snippetCode = "kontakt-erreichbarkeit"
+snippetName = "Kontakt Erreichbarkeit"
+snippetProperties[showIcon][title] = "Icon anzeigen ?"
+snippetProperties[showIcon][type] = "dropdown"
+snippetProperties[showIcon][default] = 1
+snippetProperties[showIcon][options][1] = "JA"
+snippetProperties[showIcon][options][0] = "Nein"
+==
+
+{% if showIcon is not defined %}
+{% set showIcon = '1' %}
+{% endif %}
+
+<div class="row">
+
+    <p class="tel col-lg-12 col-12">{{ (showIcon == 1) ? '<i class="fa fa-phone"></i>&nbsp;' : '' }} Tel: 06021-130 712-2</p>
+    <p class="tel col-lg-12 col-12">{{ (showIcon == 1) ? '<i class="fa fa-fax"></i>&nbsp;' : '' }} Fax: 06021-130 712-1</p>
+    <p class="tel col-lg-12 col-12"></i>{{ (showIcon == 1) ? '<i class="fa fa-envelope"></i>&nbsp;' : '' }}Email: <a href="mailto:info@seminare-immobilienmakler">info@seminare-immobilienmakler</a>
+    </p>
+
+
+
+</div>

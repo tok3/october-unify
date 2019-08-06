@@ -1,0 +1,51 @@
+
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: &quot;reverse&quot;, settings_mode_oneelement_max_offset: &quot;150&quot;}">
+    <!-- Parallax Image -->
+    <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-white-opacity-0_7--after" style="height: 140%; background-image: url({{ chunk.bg_image|media}}); transform: translate3d(0px, -149.898px, 0px);"></div>
+    <!-- End Parallax Image -->
+
+    <div class="container u-bg-overlay__inner g-py-80--md g-py-80">
+        <div class="row">
+            <!-- Section Content -->
+            <div class="col-lg-6 order-2 order-sm-1 g-mb-0 g-mb-50--sm g-mb-0--lg">
+                <div class="u-heading-v2-3--bottom g-brd-primary g-mb-30">
+                    <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">{{chunk.title|nl2br}}</h2>
+                </div>
+                <p class="g-font-size-16 g-line-height-2 g-mb-30">{{chunk.text|nl2br}}</p>
+
+                <div class="g-mb-30">
+                    {% for item in chunk.items %}
+
+
+                    {% set imgUrl = item.image|media %}
+
+                    <img  class="u-block-hover__main--grayscale g-opacity-0_6" src="{{ imgUrl|thumbnail(110,'auto','auto',100) }}" alt="{{chunk.title|nl2br}}">
+
+                   {# <img  class="u-block-hover__main--grayscale g-width-120 g-opacity-0_6" src="{{ item.image|media }}" alt="{{chunk.title|nl2br}}">#}
+
+
+                    {% endfor %}
+
+                </div>
+
+                <a href="{{chunk.btn_target}}" class="btn btn-xl u-btn-primary text-uppercase g-font-weight-600 g-font-size-12 rounded g-mr-15 g-mb-15 g-mb-0--sm">{{chunk.btntxt}}</a>
+                <small class="d-block d-sm-inline-block g-color-gray-dark-v5 g-font-size-12">{{chunk.btn_hint}}</small>
+            </div>
+            <!-- End Section Content -->
+{%if chunk.video != "" %}
+            <!-- Video Icon -->
+            <div class="col-lg-6 order-1 order-sm-2 align-self-center text-center g-pos-rel g-mb-40 g-mb-0--sm">
+                <a class="js-fancybox d-block g-pos-rel" href="javascript:;" data-src="{{chunk.video}}" data-speed="350" data-caption="Lightbox Gallery">
+              <span class="u-icon-v3 u-icon-size--xl u-block-hover--scale u-shadow-v24 g-bg-white g-color-gray-dark-v1 g-color-primary--hover g-font-size-20 rounded-circle g-cursor-pointer g-mb-10">
+                  <i class="fa fa-play g-pos-rel g-left-2"></i>
+                </span>
+                </a>
+                <p class="g-color-gray-dark-v5">{{chunk.video_hint}}</p>
+            </div>
+            <!-- End Video Icon -->
+            {% endif %}
+
+
+        </div>
+    </div>
+</section>

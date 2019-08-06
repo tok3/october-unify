@@ -1,0 +1,40 @@
+<!-- paralaxer -->
+<style>
+    .ct1 span,
+    .ct2 span {
+        padding: 0 30px;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+</style>
+<section class="g-pos-rel">
+    <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll" data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
+
+        <div class="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-pos-top-center g-bg-img-hero g-bg-bluegray-opacity-0_2--after"
+             style="height: 130%; background-image: url({{ chunk.bg_image|media}});"></div>
+
+
+        <div class="container g-bg-cover__inner g-py-100">
+            <div class="row align-items-center">
+                <div class="col-lg-6 g-mb-30 g-mb-0--lg">
+                    <h2 class="h1 ct1 text-uppercase g-color-white g-mb-30">
+                        <span class="g-bg-primary-dark-v3 g-px-5 padded-multi-line">{{chunk.text_1|nl2br}}</span><br>
+                    </h2>
+                    <h3 class="h4 ct2 g-color-white">
+                        <span class="g-bg-black-opacity-0_6 g-px-5">{{chunk.text_2|nl2br}}</span><br>
+                    </h3>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Vimeo Example -->
+                    <div class="embed-responsive embed-responsive-16by9">
+
+                        <iframe width="560" height="315" src="{{chunk.youtube_embed_url}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- End Vimeo Example -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End paralaxer -->

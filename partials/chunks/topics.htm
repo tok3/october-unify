@@ -1,0 +1,107 @@
+<section class="g-py-30">
+    <div class="container">
+
+        {% if chunk.text_on_image !=true %}
+        {% if chunk.header_style ==true %}
+        <header class="text-center g-width-60x--md mx-auto g-mb-50">
+            <div class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">{{chunk.title|nl2br}}</h2>
+            </div>
+            <p class="g-font-size-16">{{chunk.teaser|nl2br}}</p>
+        </header>
+        {%else%}
+        <header class="g-mb-50">
+            <div class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase {% if item.image =="" %}g-color-dark{% endif%}">{{chunk.title|nl2br}}</h2>
+            </div>
+            <p class="g-font-size-16">{{chunk.teaser|nl2br}}</p>
+        </header>
+        {%endif%}
+
+        <div class="row">
+
+            {% for item in chunk.items %}
+
+            <div class="col-lg-4 g-mb-30">
+                <!-- Article -->
+                <article class="u-shadow-v21 g-bg-white rounded">
+                    {% if item.image !="" %}
+                    <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="{{ item.image|media}}" alt="{{item.heading|nl2br}}">
+                    {% endif %}
+                    <div class="g-pa-30">
+                        <h3 class="g-font-weight-300 g-mb-15">
+                            <a class="u-link-v5 g-color-main g-color-primary--hover" href="#">{{item.heading|nl2br}}</a>
+                        </h3>
+                        <p>{{item.description|nl2br}}</p>
+                    </div>
+                    {% if item.action_btn_txt !="" %}
+
+                    <div class="media_ g-font-size-12 g-brd-top g-brd-gray-light-v4 g-pa-15-30">
+                        <div class="align-self-center">
+                            <a href="{{item.action_btn_target}}" class="btn btn-md btn-block u-btn-outline-darkgray g-mb-10">{{item.action_btn_txt|nl2br}}</a>
+                        </div>
+                        <!--              <button type="button" class="btn btn-primary btn-lg btn-block g-mr-10 g-mb-15">Block level button</button>-->
+                    </div>
+                    {%endif%}
+                </article>
+                <!-- End Article -->
+            </div>
+
+
+            {%endfor%}
+
+        </div>
+        {%else%}
+
+        {% if chunk.header_style ==true %}
+        <header class="text-center g-width-60x--md mx-auto g-mb-50">
+            <div class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">{{chunk.title|nl2br}}</h2>
+            </div>
+            <p class="g-font-size-16">{{chunk.teaser|nl2br}}</p>
+        </header>
+        {%else%}
+        <header class="g-mb-50">
+            <div class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase {% if item.image =="" %}g-color-dark{% endif%}">{{chunk.title|nl2br}}</h2>
+            </div>
+            <p class="g-font-size-16">{{chunk.teaser|nl2br}}</p>
+        </header>
+        {%endif%}
+
+        <div class="row">
+
+            {% for item in chunk.items %}
+
+            <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
+                <article class="u-block-hover u-shadow-v21 rounded">
+                    {% if item.image !="" %}
+                    <figure class="u-bg-overlay g-bg-black-opacity-0_4--after">
+                        <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="{{ item.image|media}}" alt="{{item.heading|nl2br}}">
+                    </figure>
+                    {% endif %}
+                    <header class="u-bg-overlay__inner g-pos-abs g-top-30 g-right-30 g-left-30 g-color-white">
+                        <h3 class="h4">
+                            <a class="g-color-white" href="#">{{item.heading|nl2br}}</a>
+                        </h3>
+                        <p>{{item.description|nl2br}}</p>
+                    </header>
+                    {% if item.action_btn_txt !="" %}
+
+                    <div class=" g-font-size-12 g-brd-top g-brd-gray-light-v4 g-pa-15-30">
+                        <div class="align-self-center">
+                            <a href="{{item.action_btn_target}}" class="btn btn-md btn-block u-btn-outline-darkgray g-mb-10">{{item.action_btn_txt|nl2br}}</a>
+                        </div>
+                        <!--              <button type="button" class="btn btn-primary btn-lg btn-block g-mr-10 g-mb-15">Block level button</button>-->
+                    </div>
+                    {%endif%}
+
+                </article>
+            </div>
+            {%endfor%}
+        </div>
+
+        {%endif%}
+    </div>
+</section>
+

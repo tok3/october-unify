@@ -1,0 +1,14 @@
+<ul class="{{ class }}">
+    {% for item in items %}
+    <li class="nav-item g-mx-10--lg g-mx-15--xl{{ item.items ? ' dropdown' : '' }}">
+        <a class="nav-link g-py-7 g-px-0 {{ item.isActive or item.isChildActive ? 'active' : '' }} {% if item.items %} dropdown-toggle{% endif %}" {% if item.items %}data-toggle="dropdown"
+           role="button" data-toggle="dropdown" {% endif %} href="{{ item.url }}">
+            {{ item.title }}{% if item.items %}&nbsp;<i class="fas fa-angle-down"></i>{% endif %}
+            {% if item.items %}<span class="caret"></span>{% endif %}
+        </a>
+        {% if item.items %}
+        {% partial 'site/menu-items' items=item.items class='dropdown-menu' %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

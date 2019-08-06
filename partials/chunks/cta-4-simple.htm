@@ -1,0 +1,63 @@
+{% if chunk.style == "primary" %}
+<div class="shortcode-html">
+    <section class="g-bg-primary g-color-white g-pa-30" style="background-image: url({{ chunk.bg_image|media}});">
+        <div class="d-md-flex justify-content-md-center text-center">
+            <div class="align-self-md-center">
+                <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
+            </div>
+            <div class="align-self-md-center">
+                <a class="btn btn-md u-btn-white" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+            </div>
+        </div>
+    </section>
+</div>
+{%endif%}
+
+{% if chunk.style == "dark" %}
+
+<div class="shortcode-html">
+    <section class="g-bg-gray-dark-v1 g-color-white g-pa-30" style="background-image: url({{ chunk.bg_image|media}});">
+        <div class="d-md-flex justify-content-md-center text-center">
+            <div class="align-self-md-center">
+                <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
+            </div>
+            <div class="align-self-md-center">
+                <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+            </div>
+        </div>
+    </section>
+</div>
+{%endif%}
+
+
+{% if chunk.style == "gray" %}
+
+<div class="shortcode-html">
+    <section class="g-bg-gray-light-v5 g-pa-30">
+        <div class="d-md-flex justify-content-md-center text-center">
+            <div class="align-self-md-center">
+                <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
+            </div>
+            <div class="align-self-md-center">
+                <a class="btn btn-md u-btn-darkgray" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+            </div>
+        </div>
+    </section>
+</div>
+{%endif%}
+
+{% if chunk.style == "light" %}
+
+<div class="shortcode-html">
+    <section class="g-brd-around g-brd-gray-light-v4 g-pa-30">
+        <div class="d-md-flex justify-content-md-center text-center">
+            <div class="align-self-md-center">
+                <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
+            </div>
+            <div class="align-self-md-center">
+                <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+            </div>
+        </div>
+    </section>
+</div>
+{%endif%}

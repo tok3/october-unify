@@ -1,0 +1,46 @@
+{{chunk.text_width}}
+<section class="container">
+<div class="row justify-content-center {{chunk.margin_top}}">
+    <div class="{{chunk.text_width}}">
+
+        {% if chunk.text_area_position == "none" %}
+        <div class="{{chunk.margin_bottom}}">
+            {% if chunk.title != "" %}
+            {{chunk.title|raw}}
+            {%endif%}
+            {{chunk.text_area|raw}}
+        </div>
+        {% elseif chunk.text_area_position == "right" %}
+        <div class="row">
+            <div class="col-md-6 {{chunk.margin_bottom}}">
+                {% if chunk.title != "" %}
+                <h2 class="g-color-black g-font-weight-600 text-center g-mb-20">{{chunk.title}}</h2>
+                {%endif%}
+                {{chunk.text_area|raw}}
+            </div>
+            <div class="col-md-6 {{chunk.margin_bottom}}">
+                <img class="img-fluid" src="{{ chunk.text_area_image|media}}" alt="Image Description">
+            </div>
+        </div>
+        {% elseif chunk.text_area_position == "left" %}
+
+        <div class="row">
+            <div class="col-md-6 {{chunk.margin_bottom}}">
+
+                <img class="img-fluid" src="{{ chunk.text_area_image|media}}" alt="Image Description">
+            </div>
+            <div class="col-md-6 {{chunk.margin_bottom}}">
+                {% if chunk.title != "" %}
+                <h2 class="g-color-black g-font-weight-600 text-center g-mb-20">{{chunk.title}}</h2>
+                {%endif%}
+                {{chunk.text_area|raw}}
+            </div>
+
+        </div>
+
+        {%endif%}
+
+
+    </div>
+</div>
+</section>

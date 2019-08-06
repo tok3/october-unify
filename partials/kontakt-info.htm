@@ -1,0 +1,33 @@
+[viewBag]
+snippetCode = "kontakt-info"
+snippetName = "Kontakt Info"
+snippetProperties[showIcon][title] = "Icon anzeigen ?"
+snippetProperties[showIcon][type] = "dropdown"
+snippetProperties[showIcon][default] = 1
+snippetProperties[showIcon][options][] = "JA"
+snippetProperties[showIcon][options][] = "Nein"
+==
+{% if showIcon is not defined %}
+{% set showIcon = '1' %}
+{% endif %}
+
+{% if showIcon == 1%}
+{% set space = '&nbsp;' %}
+{% endif %}
+
+<div class="row">
+    <p class="adr clearfix col-lg-12 col-md-12 col-12">
+
+
+
+        {{ (showIcon == 1) ? '<i class="fa fa-map-marker float-left"></i> ' : '' }}
+
+        <span class="adr-group float-left">
+                                    <span class="street-address">{{space| raw }}camindu Unternehmergesellschaft</span><br>
+                                    <span class="street-address">{{space| raw }}(haftungsbeschränkt)</span><br>
+                                    <span class="region">{{space| raw }}Behringstr. 13</span><br>
+            <span class="postal-code">{{space| raw }}<b>63814</b> Mainaschaff</span>
+        </span>
+    </p>
+
+</div>

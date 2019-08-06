@@ -1,0 +1,53 @@
+[staticMenu mainMenu]
+code = "main-menu"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[viewBag]
+==
+
+<div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+    <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+        {% partial 'site/menu-items' items=mainMenu.menuItems class='nav navbar-nav' %}
+    </ul>
+</div>
+
+{#
+<!-- Navigation -->
+<div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+    <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+
+
+        <li class="nav-item active g-mx-10--lg g-mx-15--xl">
+            <a href="../../unify-main/shortcodes/index.html" class="nav-link g-py-7 g-px-0">Shortcodes</a>
+        </li>
+
+
+
+        <li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+            <a id="nav-link--features" class="nav-link g-py-7 g-px-0" href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Features</a>
+
+            <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling animated fadeOut" id="nav-submenu--features" aria-labelledby="nav-link--features" style="display: none;">
+                <!-- Features - Headers -->
+                <li class="dropdown-item ">
+                    <a class="nav-link" href="../../unify-main/shortcodes/headers/index.html">Headers</a>
+                </li>
+                <!-- End Features - Headers -->
+
+                <!-- Features - Promo blocks -->
+                <li class="dropdown-item ">
+                    <a class="nav-link" href="../../unify-main/shortcodes/promo/index.html">Promo Blocks</a>
+                </li>
+                <!-- End Features - Promo blocks -->
+
+        </li>
+
+
+
+
+    </ul>
+</div>
+<!-- End Navigation -->
+#}

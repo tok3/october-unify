@@ -1,0 +1,62 @@
+/* Add here all your css styles (customizations) */
+/* Fonts */
+.font-light {
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300; }
+
+.font-normal {
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400; }
+
+STRONG,
+.font-bold {
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600; }
+
+.font-extra-bold {
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700; }
+
+.font-uppercase {
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase; }
+
+.font-trans {
+  opacity: 0.5 !important; }
+
+.text-mv-highlight {
+  color: #ec6f00; }
+
+#fontlogo,
+.fontlogo {
+  position: relative;
+  font-size: 1.5em;
+  /*@media screen and (max-width: 1200px) {
+    z-index:3;
+    position:absolute;
+  }*/
+  color: #21516a;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media screen and (max-width: 990px) {
+    #fontlogo,
+    .fontlogo {
+      font-size: 1.4em; } }
+  @media screen and (max-width: 400px) {
+    #fontlogo,
+    .fontlogo {
+      font-size: 1.3em; } }
+  @media screen and (max-width: 380px) {
+    #fontlogo,
+    .fontlogo {
+      font-size: 1.1em; } }
+
+#fontlogo SPAN:first-child,
+.fontlogo SPAN:first-child {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  color: white;
+  background-color: #21516a; }
+
+/*# sourceMappingURL=custom.css.map */

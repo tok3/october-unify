@@ -1,0 +1,66 @@
+[staticMenu footerMenu]
+code = "footer-menu"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[viewBag]
+==
+function onStart()
+{
+$this['currentYear'] = date('Y',time());
+}
+==
+
+
+
+<div class="shortcode-html">
+    <!-- Footer -->
+    <footer class="g-bg-darkgray-radialgradient-circle g-color-white-opacity-0_8 g-bg-img-hero g-pt-60">
+        <div class="container g-mb-60">
+            <div class="row">
+                <!-- Footer Content -->
+
+                <div class="col-lg-4 col-md-6 g-mb-40 g-mb-0--lg">
+                    <div class="footer-col-inner">
+                        <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                            <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Mehr</h2>
+                        </div>
+                        {% partial 'site/footer-menu'  items=footerMenu.menuItems class='nav navbar-nav'%}
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+                <div class="col-lg-4 col-md-6 g-mb-40 g-mb-0--lg">
+                    <div class="footer-col-inner">
+                        <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                            <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Immer Für Sie da</h2>
+                        </div>
+                        {% partial 'kontakt-erreichbarkeit' %}
+
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+                <div class="col-lg-4 col-md-6 g-mb-40 g-mb-0--lg">
+                    <div class="footer-col-inner">
+                        <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                            <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Adresse</h2>
+                        </div>
+                        {% partial 'kontakt-info' %}
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+
+
+            </div>
+        </div>
+
+        <!-- Copyright Footer -->
+        <div class="g-bg-black-opacity-0_1 g-color-white-opacity-0_8 text-center g-py-20">
+            <div class="container">
+                <small class="g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">&copy; {{currentYear}} Camindu UG. Alle Rechte vorbehalten.
+                </small>
+            </div>
+        </div>
+        <!-- End Copyright Footer -->
+    </footer>
+    <!-- End Footer -->
+</div>
+
