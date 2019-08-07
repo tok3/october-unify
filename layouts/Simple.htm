@@ -1,0 +1,48 @@
+description = "Default Home"
+
+[staticMenu]
+
+[staticPage]
+useContent = 1
+default = 0
+==
+{% partial 'site/head_default' %}
+
+
+<body>
+<main>
+
+
+    <!-- Header -->
+    {% partial 'site/header_default' %}
+    <!-- End Header -->
+    <!-- repeater definition -->
+    {repeater name="sections" groups="themes/unify/meta/repeater_fields.yaml" tab="Blocks" prompt="Add new item" }
+    {variable name="_dummy" type="text"}{/variable}
+    {/repeater}
+
+    {variable name="chunks" type="repeater" prompt="Add Content Chunk" tab="Content Chunks" placement="secondary" groups="themes/unify/meta/chunks.yaml"}{/variable}
+
+    {% page %}
+
+    <!-- Footer -->
+    {% partial 'site/footer' %}
+    <!-- End Footer -->
+
+
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+        <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+</main>
+
+<div class="u-outer-spaces-helper"></div>
+
+{%partial 'site/scripts-footer'%}
+
+
+</body>
+
+</html>

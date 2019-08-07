@@ -60,3 +60,24 @@ STRONG,
   background-color: #21516a; }
 
 /*# sourceMappingURL=custom.css.map */
+
+/*form validation error visibility*/
+.invalid-feedback {
+
+  visibility:visible;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.required:after { content:" *"; }
+.required{
+  line-height: 1.5;
+  color: #212529 !important;
+  font-weight: 400 !important;
+}
+label.control-label
+{
+  font-weight: 400 !important;
+
+}

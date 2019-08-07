@@ -1,0 +1,61 @@
+title = "kontakt"
+url = "/kontakt"
+layout = "Simple"
+is_hidden = 0
+
+[contactForm]
+==
+
+{% set test = {'bg_image': 'assets/img-temp/100x100/img7.jpg'|theme } %}
+{% set test = {'title': 'Kontakt',
+'text':'fuck',
+'font_color':'#ffffff',
+'imgsrc':'media',
+'brightness':'150',
+'bg_image':'home-office-2838944.jpg'} %}
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: &quot;fromtop&quot;, animation_duration: 25, direction: &quot;reverse&quot;}">
+    <!-- Parallax Image -->
+    <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_4--after" style="height: 140%; background-image: url({{'assets/img/communication-contact-conversation-33999.jpg'|theme }}); transform: translate3d(0px, -73.24459px, 0px);"></div>
+    <!-- End Parallax Image -->
+
+    <!-- Promo Block Content -->
+    <div class="container g-color-white text-center g-py-150">
+
+        <h2 class="display-2 g-font-weight-600 text-uppercase g-letter-spacing-1 mb-0">kontakt</h2>
+        <h1 class="h2 g-font-weight-300">Schön dass Sie vorbei schauen</h1>
+    </div>
+    <!-- Promo Block Content -->
+</section>
+
+
+<section class="container g-pt-30 g-pb-40">
+      <div class="row justify-content-between">
+        <div class="col-md-7 g-mb-60">
+            <!-- Heading -->
+            <h2 class="h3">Wir sind immer für Sie da!</h2>
+
+            <p class="g-color-gray-dark-v3 g-font-size-16">Senden Sie uns einfach Ihr Anliegen und wir werden uns schnellstmöglich mit Ihnen in Verbindung setzen.</p>
+          <hr class="g-my-40">
+            <!-- End Heading -->
+
+          <!-- Contact Form -->
+         {% component 'contactForm' %}
+
+          <!-- End Contact Form -->
+          <div class="row">
+            <div class="col-12 box">
+              <h3>Hinweis zum Datenschutz</h3>
+
+              <p>Ihre personenbezogenen Daten werden im Sinne des Datenschutzgesetzes ausschließlich zur Bearbeitung und Beantwortung Ihrer Anfrage erhoben, übermittelt, verarbeitet und
+                genutzt.</p>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          {% partial 'kontakt-info' %}
+          {% partial 'kontakt-erreichbarkeit' %}
+      </div>
+    </section>
