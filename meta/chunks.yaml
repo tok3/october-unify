@@ -89,7 +89,8 @@ paralax-section:
         130: 30%
         140: 40%
       default: 100
-      span: right
+      cssClass: 'col-sm-3'
+      span: storm
 
 #-------------------------
 banner-header:
@@ -106,17 +107,63 @@ banner-header:
       type: text
       size: small
       span: left
+    heading_size:
+      label: 'Größe'
+      type: dropdown
+      comment: ''
+      options:
+        g-font-size-20: 20
+        g-font-size-30: 30
+        g-font-size-40: 40
+        g-font-size-50: 50
+        g-font-size-60: 60
+      default: 'g-font-size-30'
+      cssClass: 'col-sm-2'
+      span: storm
     heading_style:
       label: Überschrift ist H1
       type: checkbox
       comment: Abwählen wenn schon H1 auf Page existiert
       default: true
-      span: right
+      cssClass: 'col-sm-3'
+      span: storm
     text:
       label: 'Text'
       type: textarea
       size: small
       span: full
+    description_align:
+      type: section
+      label: ''
+      comment: 'Ausrichtung und Abstände'
+    margin_top:
+      label: 'Abstand oben'
+      type: dropdown
+      options:
+        g-mt-10: 10
+        g-mt-15: 15
+        g-mt-20: 20
+        g-mt-30: 30
+        g-mt-40: 40
+        g-mt-50: 50
+        g-mt-60: 60
+      default: g-mt-20
+      cssClass: col-sm-2
+      span: storm
+    margin_bottom:
+      label: 'Abstand unten'
+      type: dropdown
+      options:
+        g-mb-10: 10
+        g-mb-15: 15
+        g-mb-20: 20
+        g-mb-30: 30
+        g-mb-40: 40
+        g-mb-50: 50
+        g-mb-60: 60
+      cssClass: 'col-sm-2'
+      span: storm
+
 
 #-------------------------
 cta-paralax-modal-video:
@@ -133,12 +180,12 @@ cta-paralax-modal-video:
       type: text
       size: small
       span: left
-    #heading_style:
-     # label: Überschrift ist H1
-     # type: checkbox
-     # comment: Abwählen wenn schon H1 auf Page existiert
-     # default: true
-     # span: right
+      #heading_style:
+      # label: Überschrift ist H1
+      # type: checkbox
+      # comment: Abwählen wenn schon H1 auf Page existiert
+      # default: true
+      # span: right
     text:
       label: 'Text'
       type: textarea
@@ -211,6 +258,35 @@ page:
 
 #-------------------------
 
+fullwidth_img:
+  name: 'Fullwidth Image'
+  description: 'Bildcontainer über komplette breite mit zentriertem Bild'
+  icon: icon-img
+  fields:
+    chunk_description:
+      type: section
+      label: 'Fullwidth Image'
+      comment: 'Bildcontainer über komplette breite mit zentriertem Bild'
+    bg_image:
+      label: 'Hintergundbild'
+      commentAbove: ''
+      type: mediafinder
+      mode: image
+      span: left
+    alt:
+      label: 'Img alt-text'
+      type: text
+      span: right
+    bgcolor:
+      label: 'Hintergrundfarbe'
+      commentAbove: ''
+      type: colorpicker
+      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
+      size: small
+      span: left
+
+#-------------------------
+
 
 cta-4-simple:
   name: 'CTA Simple'
@@ -251,7 +327,7 @@ cta-4-simple:
       span: right
       imageWidth: 20%
 
- #-------------------------
+  #-------------------------
 
 cta-2-centered:
   name: 'CTA Centered'
@@ -295,11 +371,9 @@ cta-2-centered:
       type: mediafinder
       mode: image
       span: right
-      imageWidth: 20%
+
 
 #-------------------------
-
-
 
 textcontent:
   name: 'Text'
@@ -310,32 +384,11 @@ textcontent:
       type: section
       label: Text
       comment: 'Text volle Breite oder Bild und Text'
-    'grid/3/10':
-      label: '10'
-      span: storm
-      type: text
-      comment: 'col-sm-1 '
-      cssClass: 'col-sm-offset-6 col-sm-1 last'
-    pagepick2:
-      label: Static Page
-      type: staticpagepicker
-      cssClass: col-sm-5
-      span: storm
-    pagepick:
-      label: Static Page
-      type: staticpagepicker
-      cssClass: 'col-sm-12'
-      span: storm
-    title:
-      label: 'Überschrift'
-      type: richeditor
-      size: small
-      span: full
     text_area:
       label: Textinhalt
       type: richeditor
       #toolbarButtons: bold|italic|snippets
-  #    toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen
+      #    toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen
       size: huge
       span: full
     description_opt:
@@ -370,7 +423,7 @@ textcontent:
         g-mt-50: 50
         g-mt-60: 60
       default: g-mt-20
-      cssClass: col-sm-4
+      cssClass: col-sm-2
       span: storm
     margin_bottom:
       label: 'Abstand unten'
@@ -383,7 +436,8 @@ textcontent:
         g-mb-40: 40
         g-mb-50: 50
         g-mb-60: 60
-      span: right
+      cssClass: 'col-sm-2'
+      span: storm
     text_width:
       label: 'Block Breite'
       type: dropdown
@@ -395,7 +449,76 @@ textcontent:
         col-lg-9: 9
         col-lg-8: 8
       default: 12
-      span: left
+      cssClass: 'col-sm-2'
+      span: storm
+
+#-------------------------
+
+text2col:
+  name: 'Text 2 Spalten'
+  description: Text zweispaltig
+  icon: icon-paragraph
+  fields:
+    chunk_description:
+      type: section
+      label: 'Text 2 Spalten'
+      comment: 'Text zweispaltig'
+    text_left:
+      label: Textinhalt links
+      type: richeditor
+      #toolbarButtons: bold|italic|snippets
+      #    toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|color|emoticons|inlineStyle|paragraphStyle|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertTable|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: huge
+      span: full
+    text_right:
+      label: Textinhalt rechts
+      type: richeditor
+      size: huge
+      span: full
+    description_align:
+      type: section
+      label: 'Optionen'
+      comment: 'Ausrichtung und Abstände'
+    margin_top:
+      label: 'Abstand oben'
+      type: dropdown
+      options:
+        g-mt-10: 10
+        g-mt-15: 15
+        g-mt-20: 20
+        g-mt-30: 30
+        g-mt-40: 40
+        g-mt-50: 50
+        g-mt-60: 60
+      default: g-mt-20
+      cssClass: col-sm-2
+      span: storm
+    margin_bottom:
+      label: 'Abstand unten'
+      type: dropdown
+      options:
+        g-mb-10: 10
+        g-mb-15: 15
+        g-mb-20: 20
+        g-mb-30: 30
+        g-mb-40: 40
+        g-mb-50: 50
+        g-mb-60: 60
+      cssClass: 'col-sm-2'
+      span: storm
+    text_width:
+      label: 'Block Breite'
+      type: dropdown
+      comment: 'col-lg-X'
+      options:
+        col-lg-12: 12
+        col-lg-11: 11
+        col-lg-10: 10
+        col-lg-9: 9
+        col-lg-8: 8
+      default: 12
+      cssClass: 'col-sm-2'
+      span: storm
 
 #-------------------------
 

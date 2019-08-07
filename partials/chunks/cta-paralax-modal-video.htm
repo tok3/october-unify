@@ -18,11 +18,9 @@
 
 
                     {% set imgUrl = item.image|media %}
+                    {#<img  class="u-block-hover__main--grayscale g-opacity-0_6" src="{{ imgUrl|thumbnail(110,'auto','auto',100) }}?90" alt="{{chunk.title|nl2br}}">#}
 
-                    <img  class="u-block-hover__main--grayscale g-opacity-0_6" src="{{ imgUrl|thumbnail(110,'auto','auto',100) }}" alt="{{chunk.title|nl2br}}">
-
-                   {# <img  class="u-block-hover__main--grayscale g-width-120 g-opacity-0_6" src="{{ item.image|media }}" alt="{{chunk.title|nl2br}}">#}
-
+<img  class="u-block-hover__main--grayscale g-width-120 g-opacity-0_6" src="{{ item.image|media }}" alt="{{chunk.title|nl2br}}">
 
                     {% endfor %}
 

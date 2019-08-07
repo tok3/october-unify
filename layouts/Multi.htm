@@ -36,6 +36,10 @@ default = 1
             {% partial 'chunks/text' chunk=chunk %}
         {% endif %}
 
+        {% if chunk._group == "text2col" %}
+            {% partial 'chunks/text-2-col' chunk=chunk %}
+        {% endif %}
+
         {% if chunk._group == "cta-2-centered" %}
             {% partial 'chunks/cta-2-centered' chunk=chunk %}
         {% endif %}
@@ -54,6 +58,9 @@ default = 1
 
         {% if chunk._group == "cta-paralax-modal-video" %}
             {% partial 'chunks/cta-paralax-modal-video' chunk=chunk %}
+        {% endif %}
+        {% if chunk._group == "fullwidth_img" %}
+            {% partial 'chunks/fullwidth-image' chunk=chunk %}
         {% endif %}
 
         {% if chunk._group == "page" %}

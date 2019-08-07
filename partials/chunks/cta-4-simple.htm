@@ -5,9 +5,12 @@
             <div class="align-self-md-center">
                 <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
             </div>
+            {% if chunk.btntxt != "" %}
+
             <div class="align-self-md-center">
                 <a class="btn btn-md u-btn-white" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
+            {%endif%}
         </div>
     </section>
 </div>
@@ -21,9 +24,11 @@
             <div class="align-self-md-center">
                 <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
             </div>
+            {% if chunk.btntxt != "" %}
             <div class="align-self-md-center">
                 <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
+            {%endif%}
         </div>
     </section>
 </div>
@@ -38,9 +43,12 @@
             <div class="align-self-md-center">
                 <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
             </div>
+            {% if chunk.btntxt != "" %}
+
             <div class="align-self-md-center">
                 <a class="btn btn-md u-btn-darkgray" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
+            {%endif%}
         </div>
     </section>
 </div>
@@ -54,9 +62,12 @@
             <div class="align-self-md-center">
                 <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-mb-0--md">{{chunk.claim|nl2br}}</p>
             </div>
+            {% if chunk.btntxt != "" %}
+
             <div class="align-self-md-center">
                 <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
+            {%endif%}
         </div>
     </section>
 </div>

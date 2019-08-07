@@ -1,8 +1,8 @@
-<div class="text-center mx-auto g-width-60x--md g-mb-0">
+<div class="text-center mx-auto g-width-60x--md g-mb-0 {{chunk.margin_top}}">
     {% if chunk.heading_style == 1%}
-    <h1 class="d-inline-block g-color-primary g-font-size-70 g-line-height-1 mb-3">{{chunk.title|nl2br}}</h1>
-    {% else %}}
-    <div class="text-center mx-auto g-width-60x--md g-mb-0"><span class="d-inline-block g-color-primary g-font-size-70 g-line-height-1 mb-3">{{chunk.title|nl2br}} </div>
+    <h1 class="d-inline-block g-color-primary {{chunk.heading_size}} g-line-height-1 mb-3">{{chunk.title|nl2br}}</h1>
+    {% else %}
+    <div class="text-center mx-auto g-width-60x--md g-mb-0"><span class="d-inline-block g-color-primary {{chunk.heading_size}} g-line-height-1 mb-3">{{chunk.title|nl2br}} </div>
     {% endif %}
-    <p class="g-color-black g-font-size-20 g-line-height-2">{{chunk.text|nl2br}}</p>
+    <p class="g-color-black g-font-size-20 g-line-height-2 {{chunk.margin_bottom}}">{{chunk.text|nl2br}}</p>
 </div>
