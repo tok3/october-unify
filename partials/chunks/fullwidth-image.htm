@@ -4,7 +4,12 @@
     }
 </style>
 
-<section class="g-mt-10 bg-image-full text-center" style="background-color:{{chunk.bgcolor}};">
-    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-    <img  class="g-mt-10 g-mb-10 bg-image-full" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
+
+<section class="{{chunk.margin_top}}" style="background-color:{{chunk.bgcolor}};">
+
+            <div class="{{chunk.margin_bottom}} container {{chunk.block_width}}">
+                <img  class="g-mt-10 g-mb-10 img-fluid" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
+
+            </div>
+
 </section>

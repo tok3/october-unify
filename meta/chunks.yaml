@@ -259,14 +259,14 @@ page:
 #-------------------------
 
 fullwidth_img:
-  name: 'Fullwidth Image'
+  name: 'Content Fullwidth Image'
   description: 'Bildcontainer über komplette breite mit zentriertem Bild'
   icon: icon-img
   fields:
     chunk_description:
       type: section
-      label: 'Fullwidth Image'
-      comment: 'Bildcontainer über komplette breite mit zentriertem Bild'
+      label: 'Content Fullwidth Image'
+      comment: 'Bildcontainer über komplette breite mit zentriertem Bild in '
     bg_image:
       label: 'Hintergundbild'
       commentAbove: ''
@@ -284,6 +284,50 @@ fullwidth_img:
       availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
       size: small
       span: left
+    description_align:
+      type: section
+      label: ''
+      comment: 'Ausrichtung und Abstände'
+    margin_top:
+      label: 'Abstand oben'
+      type: dropdown
+      options:
+        g-mt-10: 10
+        g-mt-15: 15
+        g-mt-20: 20
+        g-mt-30: 30
+        g-mt-40: 40
+        g-mt-50: 50
+        g-mt-60: 60
+      default: g-mt-20
+      cssClass: col-sm-2
+      span: storm
+    margin_bottom:
+      label: 'Abstand unten'
+      type: dropdown
+      options:
+        g-mb-10: 10
+        g-mb-15: 15
+        g-mb-20: 20
+        g-mb-30: 30
+        g-mb-40: 40
+        g-mb-50: 50
+        g-mb-60: 60
+      cssClass: 'col-sm-2'
+      span: storm
+    block_width:
+      label: 'Block/Img Breite'
+      type: dropdown
+      comment: 'col-lg-X'
+      options:
+        col-lg-12: 12
+        col-lg-11: 11
+        col-lg-10: 10
+        col-lg-9: 9
+        col-lg-8: 8
+      default: 12
+      cssClass: 'col-sm-2'
+      span: storm
 
 #-------------------------
 
@@ -504,6 +548,7 @@ text2col:
         g-mb-40: 40
         g-mb-50: 50
         g-mb-60: 60
+      default: g-mb-20
       cssClass: 'col-sm-2'
       span: storm
     text_width:
