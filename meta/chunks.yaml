@@ -318,13 +318,14 @@ fullwidth_img:
     block_width:
       label: 'Block/Img Breite'
       type: dropdown
-      comment: 'col-lg-X'
       options:
-        col-lg-12: 12
-        col-lg-11: 11
-        col-lg-10: 10
-        col-lg-9: 9
-        col-lg-8: 8
+        12: 12
+        11: 11
+        10: 10
+        9: 9
+        8: 8
+        7: 7
+        6: 6
       default: 12
       cssClass: 'col-sm-2'
       span: storm
@@ -492,7 +493,7 @@ textcontent:
         col-lg-10: 10
         col-lg-9: 9
         col-lg-8: 8
-      default: 12
+      default: 10
       cssClass: 'col-sm-2'
       span: storm
 
@@ -561,7 +562,7 @@ text2col:
         col-lg-10: 10
         col-lg-9: 9
         col-lg-8: 8
-      default: 12
+      default: 10
       cssClass: 'col-sm-2'
       span: storm
 

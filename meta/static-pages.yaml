@@ -1,8 +1,10 @@
 static-pages:
+    index: {  }
     weg: {  }
     qms: {  }
     impressum: {  }
     datenschutz: {  }
     wiederufsbelehrung: {  }
     agb: {  }
-    index: {  }
+    preise: {  }
+    themen: {  }

@@ -1,14 +1,35 @@
 <ul class="{{ class }}">
     {% for item in items %}
-    <li class="nav-item g-mx-10--lg g-mx-15--xl{{ item.items ? ' dropdown' : '' }}">
-        <a class="nav-link g-py-7 g-px-0 {{ item.isActive or item.isChildActive ? 'active' : '' }} {% if item.items %} dropdown-toggle{% endif %}" {% if item.items %}data-toggle="dropdown"
-           role="button" data-toggle="dropdown" {% endif %} href="{{ item.url }}">
+
+    <li class="nav-item g-mx-10--lg g-mx-15--xl{{ item.items ? ' hs-has-sub-menu' : '' }}" {{ item.items ? 'data-animation-in="fadeIn" data-animation-out="fadeOut"' : '' }}>
+
+    {% if item.items %}
+
+    {% set linkID =  item.title|lower|replace({' ': '-'})%}
+
+    <a id="nav-link--{{ linkID }}" class="nav-link g-py-7 g-px-0  {{ item.isActive or item.isChildActive ? 'active' : '' }}" href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--{{ linkID }}">{{ item.title}}</a>
+
+    {% set classes =  'hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling animated fadeOut' %}
+
+    {% set adds =  'id="nav-submenu--'~linkID~'" aria-labelledby="nav-link--features" style="display: none;"' %}
+
+
+    {% partial 'site/menu-items' items=item.items class=classes additionals=adds %}
+
+    {% else %}
+
+
+        <a class="nav-link g-py-7 g-px-0 {{ item.isActive or item.isChildActive ? 'active' : '' }} " href="{{ item.url }}">
             {{ item.title }}{% if item.items %}&nbsp;<i class="fas fa-angle-down"></i>{% endif %}
-            {% if item.items %}<span class="caret"></span>{% endif %}
-        </a>
-        {% if item.items %}
-        {% partial 'site/menu-items' items=item.items class='dropdown-menu' %}
-        {% endif %}
-    </li>
+         </a>
+
+    {% endif %}
+
+
+
+
+     </li>
+
+
     {% endfor %}
 </ul>
