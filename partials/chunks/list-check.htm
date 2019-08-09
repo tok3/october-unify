@@ -1,0 +1,37 @@
+{{chunk.fontBH}}
+<section class="1g-bg-secondary g-py-{{chunk.spaceTB}}" style="background-color:{{chunk.bg_color}};">
+    <div class="container">
+        <div class="row justify-content-center g-color-gray-{{chunk.fbright}}-v2">
+            <div class="{{chunk.text_width}}">
+            <div class="col-lg-9 align-self-center g-mb-50 g-mb-0--lg">
+                {% if chunk.title != ""%}
+                <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+
+                    {% if chunk.heading_style == 1%}
+                    <h1 class="h4 u-heading-v2__title g-font-weight-600 text-uppercase">{{chunk.title|nl2br}} </h1>
+                    {% else %}
+                    <h2 class="h4 u-heading-v2__title g-font-weight-600 text-uppercase">{{chunk.title|nl2br}} </h2>
+                    {% endif %}
+
+                </header>
+                {% endif %}
+                <p class="g-mb-30">{{chunk.text|raw}}</p>
+                {% if chunk.listub != ""%}
+                <h3 class="h5 g-mb-10">{{chunk.listub}}</h3>
+                {% endif %}
+                <ul class="list-unstyled mb-0">
+                    {% for item in chunk.listitems %}
+                    <li class="d-flex g-mb-10">
+                        <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i> {{item.text}}
+                    </li>
+                    {%endfor%}
+                </ul>
+                <p class="g-mt-30">{{chunk.text2|raw}}</p>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

@@ -66,8 +66,12 @@ theme = "light-bottom"
         {% if chunk._group == "cta-paralax-modal-video" %}
             {% partial 'chunks/cta-paralax-modal-video' chunk=chunk %}
         {% endif %}
+
         {% if chunk._group == "fullwidth_img" %}
             {% partial 'chunks/fullwidth-image' chunk=chunk %}
+        {% endif %}
+        {% if chunk._group == "list-check-section" %}
+            {% partial 'chunks/list-check' chunk=chunk %}
         {% endif %}
 
         {% if chunk._group == "page" %}
