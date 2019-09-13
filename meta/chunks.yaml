@@ -546,6 +546,7 @@ textcontent:
   name: 'Text'
   description: Text volle Breite oder Bild und Text
   icon: icon-paragraph
+  sitesearch: test
   fields:
     chunk_description:
       type: section
@@ -615,7 +616,7 @@ textcontent:
         col-lg-10: 10
         col-lg-9: 9
         col-lg-8: 8
-      default: 10
+      default: col-lg-10
       cssClass: 'col-sm-2'
       span: storm
 
@@ -684,7 +685,7 @@ text2col:
         col-lg-10: 10
         col-lg-9: 9
         col-lg-8: 8
-      default: 10
+      default: col-lg-10
       cssClass: 'col-sm-2'
       span: storm
 

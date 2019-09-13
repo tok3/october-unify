@@ -1,0 +1,92 @@
+description = "News"
+
+[staticMenu]
+
+[staticPage]
+useContent = 0
+default = 0
+
+[cookieConsent]
+message = "This website uses cookies to ensure you get the best experience on our website."
+dismiss = "Got it!"
+learnMore = "More info"
+link = "http://www.yourwebpage.com/cookies"
+theme = "light-bottom"
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "serp.htm"
+==
+{% partial 'site/head_default' %}
+
+
+<body>
+
+
+
+    <!-- Header -->
+    {% partial 'site/header_default' %}
+    <!-- End Header -->
+
+
+<section class="container g-pt-10 g-pb-10">
+    {% page %}
+</section>
+    <!-- -->
+
+    <!--
+
+    {% for section in sections %}
+    {% if section._group == "title" %}
+    <h2 class="section__title">{{ section.title }}</h2>
+    {% endif %}
+    {% if section._group == "subtitle" %}
+    <h3 class="section__subtitle dark clear bg-white text-libre">{{ section.subtitle }}</h3>
+    {% endif %}
+    {% if section._group == "content" %}
+    <div class="section__content">
+        <div class="section__content__paragraph  {% if section.text_area_position != " none
+        " %}flc-{{ section.text_area_position }}{% endif %}">{{ section.text_area|raw }}
+    </div>
+    {% if section.text_area_image != "" %}<img class="section__content__image" src="{{ section.text_area_image|media }}"/>{% endif %}
+
+    </div>
+    {% endif %}
+    {% if section._group == "Sous-titre" %}
+    <div class="section__content">
+        <div class="section__content__paragraph  {% if section.text_area_position != " none
+        " %}flc-{{ section.text_area_position }}{% endif %}">{{ section.text_area|raw }}
+    </div>
+    {% if section.text_area_image != "" %}<img class="thumbnail section__content__image" src="{{ section.text_area_image|media }}"/>{% endif %}
+
+    </div>
+    {% endif %}
+    ....
+    {% endfor %}
+
+-->
+
+
+    <!-- Footer -->
+    {% partial 'site/footer' %}
+    <!-- End Footer -->
+
+
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+        <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+</main>
+
+<div class="u-outer-spaces-helper"></div>
+
+{% partial 'site/scripts-footer' %}
+
+
+</body>
+
+</html>

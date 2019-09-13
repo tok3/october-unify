@@ -5,7 +5,7 @@
             <div class="{{chunk.text_width}}">
             <div class="col-lg-9 align-self-center g-mb-50 g-mb-0--lg">
                 {% if chunk.title != ""%}
-                <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                <header class="u-heading-v2-3--bottom g-brd-primary g-mb-10">
 
                     {% if chunk.heading_style == 1%}
                     <h1 class="h4 u-heading-v2__title g-font-weight-600 text-uppercase">{{chunk.title|nl2br}} </h1>
@@ -15,7 +15,7 @@
 
                 </header>
                 {% endif %}
-                <p class="g-mb-30">{{chunk.text|raw}}</p>
+                <div class="g-mb-10">{{chunk.text|raw}}</div>
                 {% if chunk.listub != ""%}
                 <h3 class="h5 g-mb-10">{{chunk.listub}}</h3>
                 {% endif %}
@@ -26,7 +26,7 @@
                     </li>
                     {%endfor%}
                 </ul>
-                <p class="g-mt-30">{{chunk.text2|raw}}</p>
+                <div class="g-mt-30">{{chunk.text2|raw}}</div>
             </div>
             </div>
         </div>

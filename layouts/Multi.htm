@@ -17,7 +17,6 @@ theme = "light-bottom"
 
 
 <body>
-<main>
 
 {#
     {_variable name="sections" type="repeater" prompt="Add another section" tab="Sections" placement="secondary" groups="themes/unify/meta/repeater_fields.yaml"}{/variable}
@@ -25,9 +24,10 @@ theme = "light-bottom"
     {variable name="chunks" type="repeater" prompt="Add Content Chunk" tab="Content Chunks" placement="secondary" groups="themes/unify/meta/chunks.yaml"}{/variable}
 
     <!-- Header -->
-    {% partial 'site/header_default' %}
-    <!-- End Header -->
 
+
+{% partial 'site/header_default' %}
+    <!-- End Header -->
 
     {% for chunk in chunks %}
           {% filter parseSnippets %}   {# Plugin Richeditor Snippets#}

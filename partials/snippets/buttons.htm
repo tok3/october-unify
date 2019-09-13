@@ -28,8 +28,10 @@ snippetProperties[target][options][] = ""
 snippetProperties[block][title] = "Button als Block-Level"
 snippetProperties[block][type] = "checkbox"
 snippetProperties[block][default] = 0
-snippetProperties[block][options]['btn-block'] = "btn-block"
+snippetProperties[block][options][btn-block] = "btn-block"
+snippetProperties[top][title] = "Ziel in neuem Tab/Browserfenster öffnen"
+snippetProperties[top][type] = "checkbox"
+snippetProperties[top][default] = 0
+snippetProperties[top][options][] = ""
 ==
-
-
-<a href="{{target}}" class="btn {{size}} {{color}} {{ (block == 1) ? 'btn-block' : '' }} u-btn-primary g-mr-10 g-mb-15">{{text}}</a>
+<a href="{{target}}"{{ (top == 1) ? 'target=top' : '' }} class="btn {{size}} {{color}} {{ (block == 1) ? 'btn-block' : '' }} u-btn-primary g-mr-10 g-mb-15">{{text}}</a>

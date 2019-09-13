@@ -1,0 +1,57 @@
+
+{#https://octobercms.com/plugin/support/offline-sitesearch/custom-pagination#}
+
+
+
+{% if results.lastPage > 1 %}
+<ul class="list-inline mb-0">
+
+    {% if results.currentPage > 1 %}
+    <li class="list-inline-item">
+        <a class="u-pagination-v1__item g-width-30 g-height-30 g-brd-secondary-light-v2 g-brd-primary--hover g-color-text-light-v1 g-color-primary--hover g-font-size-12 rounded g-pa-5 g-ml-15"
+           href="{{ results.previousPageUrl }}" aria-label="Prev">
+                    <span aria-hidden="true">
+                      <i class="fa fa-angle-left"></i>
+                    </span>
+            <span class="sr-only">Prev</span>
+        </a>
+    </li>
+    {% endif %}
+
+    {% for page in 1..results.lastPage %}
+
+    {% if results.currentPage == page %}
+
+    <li class="list-inline-item">
+        <a class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-secondary-light-v2 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded g-pa-5"
+           href="{{ this.page.baseFileName | page }}?q={{ searchResults.query }}&amp;page={{ page }}">{{page}}</a>
+    </li>
+    {%else%}
+    <li class="list-inline-item">
+        <a class="u-pagination-v1__item g-width-30 g-height-30 g-color-text-light-v1 g-color-primary--hover g-font-size-12 rounded g-pa-5"
+           href="{{ this.page.baseFileName | page }}?q={{ searchResults.query }}&amp;page={{ page }}">{{page}}</a>
+    </li>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% if results.lastPage > results.currentPage %}
+    <li class="list-inline-item">
+        <a class="u-pagination-v1__item g-width-30 g-height-30 g-brd-secondary-light-v2 g-brd-primary--hover g-color-text-light-v1 g-color-primary--hover g-font-size-12 rounded g-pa-5 g-ml-15"
+           href="{{ results.nextPageUrl }}" aria-label="Next">
+                    <span aria-hidden="true">
+                      <i class="fa fa-angle-right"></i>
+                    </span>
+            <span class="sr-only">Next</span>
+        </a>
+    </li>
+    {% endif %}
+
+
+    <li class="list-inline-item float-right">
+        <span class="u-pagination-v1__item-info g-color-gray-dark-v4 g-font-size-12 g-pa-5">Seite {{results.currentPage}} von {{ results.lastPage }}</span>
+    </li>
+</ul>
+
+{% endif %}

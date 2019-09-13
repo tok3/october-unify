@@ -19,28 +19,28 @@
 
 </style>
 
+
 {#
-<section class="{{chunk.margin_top}}" style="background-color:{{chunk.bgcolor}};">
-
-            <div class="{{chunk.margin_bottom}} container {{chunk.block_width}}">
-                <img  class="g-mt-10 g-mb-10 img-fluid" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
-
-            </div>
-
-</section>
-
-
     <section class="{{chunk.margin_top}} br" style="background-color:{{chunk.bgcolor}};">
         <div class="d-md-flex justify-content-md-center align-items-center text-center bb" >
-            <div class="align-self-md-center   col-sm-6 col-sm-6 col-md-6 col-lg-6 bg">
+            <div class="align-self-md-center   col-sm-{{chunk.block_width}} col-sm-{{chunk.block_width}} col-md-{{chunk.block_width}} col-lg-{{chunk.block_width}}">
                 <img  class="g-mt-10 g-mb-10 img-fluid" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
             </div>
 
         </div>
     </section>
-#}
+
 <div class="d-flex justify-content-center bd-highlight mb-3 " style="background-color:{{chunk.bgcolor}};">
     <div class="align-self-md-center   col-sm-{{chunk.block_width}} col-sm-{{chunk.block_width}} col-md-{{chunk.block_width}} col-lg-{{chunk.block_width}}">
         <img  class="g-mt-10 g-mb-10 img-fluid" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
     </div>
 </div>
+#}
+<section class="{{chunk.margin_top}} " style="background-color:{{chunk.bgcolor}};">
+    <div class="d-md-flex justify-content-sm-center align-items-center text-center " >
+        <div class="align-self-sm-center  col-sm-12 col-sm-{{chunk.block_width}} col-md-{{chunk.block_width}} col-lg-{{chunk.block_width}}">
+            <img  class="g-mt-10 g-mb-10 img-fluid" src="{{ chunk.bg_image|media}}" alt="{{chunk.alt}}">
+        </div>
+
+    </div>
+</section>
