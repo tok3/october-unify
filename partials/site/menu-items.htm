@@ -2,17 +2,19 @@
 
     {% for item in items %}
 
-    <li class="nav-item g-mx-10--lg g-mx-15--xl{{ item.items ? ' hs-has-sub-menu' : '' }}" {{ item.items ? 'data-animation-in="fadeIn" data-animation-out="fadeOut"' : '' }}>
+    <li class="nav-item g-mx-10--lg g-mx-15--xl{{ item.items ? ' hs-has-sub-menu' : '' }}" {{ item.items ?
+    'data-animation-in="fadeIn" data-animation-out="fadeOut"' : '' }}>
 
     {% if item.items %}
 
-    {% set linkID =  item.title|lower|replace({' ': '-'})%}
+    {% set linkID = item.title|lower|replace({' ': '-'})%}
 
-    <a id="nav-link--{{ linkID }}" class="nav-link g-py-7 g-px-0  {{ item.isActive or item.isChildActive ? 'active' : '' }}" href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--{{ linkID }}">{{ item.title}}</a>
+    <a id="nav-link--{{ linkID }}" class="nav-link g-py-7 g-px-0  {{ item.isActive or item.isChildActive ? 'active' : '' }}" href="#" aria-haspopup="true" aria-expanded="false"
+       aria-controls="nav-submenu--{{ linkID }}">{{ item.title}}</a>
 
-    {% set classes =  'hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling animated fadeOut' %}
+    {% set classes = 'hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling animated fadeOut' %}
 
-    {% set adds =  'id="nav-submenu--'~linkID~'" aria-labelledby="nav-link--features" style="display: none;"' %}
+    {% set adds = 'id="nav-submenu--'~linkID~'" aria-labelledby="nav-link--features" style="display: none;"' %}
 
 
     {% partial 'site/menu-items' items=item.items class=classes additionals=adds %}
@@ -20,23 +22,60 @@
     {% else %}
 
 
-        <a class="nav-link g-py-7 g-px-0 {{ item.isActive or item.isChildActive ? 'active' : '' }} " href="{{ item.url }}">
-            {{ item.title }}{% if item.items %}&nbsp;<i class="fas fa-angle-down"></i>{% endif %}
-         </a>
+    <a class="nav-link g-py-7 g-px-0 {{ item.isActive or item.isChildActive ? 'active' : '' }} " href="{{ item.url }}">
+        {{ item.title }}{% if item.items %}&nbsp;<i class="fas fa-angle-down"></i>{% endif %}
+    </a>
 
     {% endif %}
 
 
-
-
-     </li>
+    </li>
 
 
     {% endfor %}
- <li>
-    <div class="d-inline-block pull-right g-hidden-lg-up g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
-        <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15"
-           href="https://admin.hausverw.de" target="_blank">Login</a>
-    </div>
- </li>
+
+
+    {% if user %}
+
+
+
+    <li class="nav-item g-mx-10--lg g-mx-15--xl">
+        <a class="nav-link g-py-7 g-px-0 {{ pageid == 'profil' ? 'active' : '' }}" href="{{url('/profil/'~user.forum_member.slug)}}">Profil</a>
+
+    </li>
+
+    <li class="nav-item g-mx-10--lg g-mx-15--xl">
+        <a class="nav-link g-py-7 g-px-0  {{ item.isActive or item.isChildActive ? 'active' : '' }}" data-request="onLogout" data-request-data="redirect: '{{url('/')}}'">Logout</a>
+    </li>
+
+    <!-- <li>
+
+        <a class="d-inline-block  g-pos-rel g-valign-middle g-pl-30 g-pl-0&#45;&#45;lg" href="{{url('/integrations')}}">Dashboard</a>
+    </li>
+    <li>
+        <a class="nav-link g-py-7 g-px-0  {{ item.isActive or item.isChildActive ? 'active' : '' }}" data-request="onLogout" data-request-data="redirect: '{{url('/')}}'">Sign out</a>
+    </li>-->
+
+    {% else %}
+    {% endif %}
+
+
+    <li>
+        <div class="d-inline-block pull-right g-hidden-lg-up g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
+            <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15"
+               href="https://admin.hausverw.de" target="_blank">Login</a>
+        </div>
+    </li>
+
+
+    <li>
+        <div class="d-inline-block pull-right g-hidden-lg-up g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
+            <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15"
+               href="https://admin.hausverw.de" target="_blank">Login</a>
+        </div>
+    </li>
+
+
 </ul>
+
+
