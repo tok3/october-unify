@@ -1,0 +1,28 @@
+<header class="text-center mb-4">
+    <h2 class="h2 g-color-black g-font-weight-600">Sie haben Ihr Passwort vergessen?</h2>
+    <p class="lead">
+        Kein Problem! Geben Sie einfach Ihre E-Mail-Adresse ein, um Ihr Konto zu verifizieren.
+    </p>
+
+</header>
+<form
+        class="g-py-15 g-mb-100"
+        data-request="{{ __SELF__ }}::onRestorePassword"
+        data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
+
+
+
+    <div class="mb-4">
+
+        <input name="email" type="email" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15"
+               id="userRestoreEmail" placeholder="Ihre E-Mail hier eingeben">
+
+
+    </div>
+
+    <div class="row">
+        <div class="col align-self-center text-right">
+            <button type="submit" class="btn btn-md u-btn-primary rounded g-py-13 g-px-25">Passwort wiederherstellen</button>
+        </div>
+    </div>
+</form>
