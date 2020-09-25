@@ -59,7 +59,8 @@ paralax-section:
       span: right
     text:
       label: 'Text'
-      type: textarea
+      type: richeditor
+      toolbarButtons: paragraphStyle|snippets|style|bold|italic|underline|strikeThrough|insertHR|undo|redo|clearFormatting|selectAll|html|fullscreen
       size: small
       span: full
     bg_image:
