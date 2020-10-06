@@ -7,7 +7,7 @@ paralaxer:
   fields:
     chunk_description:
       type: section
-      label: Paralax Banner + opt Video
+      label: Paralax Banner + opt Youtube Video
       comment: Paralax Banner mit optionalem Youtoube Video
     text_1:
       label: 'Teasertext 1'
@@ -33,6 +33,50 @@ paralaxer:
       commentAbove: 'Youtube Embed-Link'
       type: text
       span: right
+
+#-------------------------
+paralaxer-2:
+  name: Paralax Banner + opt Local Video
+  description: 'Paralax Banner mit optionalem Lokalem Video'
+  icon: icon-leaf
+  fields:
+    chunk_description:
+      type: section
+      label: Paralax Banner + Video (HTML5 LOKAL)
+      comment: Paralax Banner mit optionalem Lokalem Video
+    text_1:
+      label: 'Teasertext 1'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: left
+    text_2:
+      label: 'Teasertext 2'
+      type: textarea
+      toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|undo|redo|clearFormatting|selectAll|html|fullscreen
+      size: small
+      span: right
+    bg_image:
+      label: Hintergrundbild
+      commentAbove: 'Paralax Hintergrund'
+      type: mediafinder
+      mode: image
+      span: left
+      imageWidth: 40%
+    poster_image:
+      label: 'Posterimage'
+      commentAbove: 'Video Poster/Startbild'
+      type: mediafinder
+      mode: image
+      span: left
+      imageWidth: 40%
+    video:
+      label: 'Video'
+      commentAbove: ''
+      type: mediafinder
+      mode: file
+      span: right
+
 
 #-------------------------
 

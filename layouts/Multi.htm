@@ -38,6 +38,9 @@ security = "all"
         {% if chunk._group == "paralaxer" %}
             {% partial 'chunks/paralaxer-video' chunk=chunk %}
         {% endif %}
+        {% if chunk._group == "paralaxer-2" %}
+            {% partial 'chunks/paralaxer-video-local' chunk=chunk %}
+        {% endif %}
         {% if chunk._group == "paralax-section" %}
             {% partial 'chunks/paralax-section' chunk=chunk %}
         {% endif %}

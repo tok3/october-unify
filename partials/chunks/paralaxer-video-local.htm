@@ -25,21 +25,11 @@
                     </h3>
                 </div>
                 <div class="col-lg-6">
-                    <!-- Vimeo Example -->
-                    <div class="embed-responsive embed-responsive-16by9">
 
-                        <iframe width="560" height="315" src="{{chunk.youtube_embed_url}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-
-                    <video controls poster="{{chunk.youtube_embed_url}}">
-                        <source src="movie.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
+                    <video controls poster="{{chunk.poster_image|media}}">
+                        <source src="{{chunk.video|media}}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-
-                    <!-- End Vimeo Example -->
                 </div>
             </div>
         </div>
