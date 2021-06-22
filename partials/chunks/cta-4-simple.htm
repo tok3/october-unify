@@ -8,7 +8,7 @@
             {% if chunk.btntxt != "" %}
 
             <div class="align-self-md-center">
-                <a class="btn btn-md u-btn-white" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+                <a class="btn btn-md u-btn-white" {{chunk.custum_attr}} href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
             {%endif%}
         </div>
@@ -26,7 +26,7 @@
             </div>
             {% if chunk.btntxt != "" %}
             <div class="align-self-md-center">
-                <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+                <a class="btn btn-md u-btn-primary" {{chunk.custum_attr}} href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
             {%endif%}
         </div>
@@ -46,7 +46,7 @@
             {% if chunk.btntxt != "" %}
 
             <div class="align-self-md-center">
-                <a class="btn btn-md u-btn-darkgray" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+                <a class="btn btn-md u-btn-darkgray" {{chunk.custum_attr}} href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
             {%endif%}
         </div>
@@ -65,7 +65,7 @@
             {% if chunk.btntxt != "" %}
 
             <div class="align-self-md-center">
-                <a class="btn btn-md u-btn-primary" href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
+                <a class="btn btn-md u-btn-primary" {{chunk.custum_attr}} href="{{chunk.target}}">{{chunk.btntxt|nl2br}}</a>
             </div>
             {%endif%}
         </div>

@@ -118,7 +118,7 @@ paralax-section:
       label: 'Schriftfarbe'
       comment: 'Vorsicht Augenkrebs! '
       type: colorpicker
-      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
+      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e' ]
       size: small
       span: left
     brightness:
@@ -167,7 +167,7 @@ list-check-section:
   fields:
     chunk_description:
       type: section
-      label:  Text - List Check
+      label: Text - List Check
       comment: 'section mit Liste unt Text'
     title:
       label: 'Überschrift'
@@ -234,15 +234,15 @@ list-check-section:
       label: 'Hintergrundfarbe'
       comment: ''
       type: colorpicker
-      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
+      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e' ]
       cssClass: 'col-sm-4'
       span: storm
     fbright:
       label: 'Schrift'
       type: radio
       options:
-        light:  'Hell'
-        dark:  'Dunkel'
+        light: 'Hell'
+        dark: 'Dunkel'
       default: dark
       cssClass: 'col-sm-5'
       span: storm
@@ -448,7 +448,7 @@ fullwidth_img:
       label: 'Hintergrundfarbe'
       commentAbove: ''
       type: colorpicker
-      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e']
+      availableColors: [ '#fffff','#fafafa', '#00a0df','#000000','#bbb','#999','#f0ad4e' ]
       size: small
       span: left
     description_align:
@@ -521,6 +521,10 @@ cta-4-simple:
       label: 'Target URL'
       type: text
       span: right
+    cust_attr:
+      label: 'Target URL'
+      type: text
+      span: right
     style:
       label: 'Style'
       type: dropdown
@@ -572,9 +576,9 @@ cta-2-centered:
       label: 'Style'
       type: radio
       options:
-        light:  '"BG Primary", Heller Hintergrund'
+        light: '"BG Primary", Heller Hintergrund'
         paralax: Paralax Image Hintergrund
-        dark:  '"BG Dark", Dunkler Hintergrund oder Paralax Image'
+        dark: '"BG Dark", Dunkler Hintergrund oder Paralax Image'
       default: light
       span: left
     bg_image:
@@ -612,7 +616,7 @@ textcontent:
       type: radio
       span: left
       default: none
-      options: {none: [Kein Bild, 'Der Inhalt nimmt die gesamte Breite der Seite ein.'], left: ['Links ausrichten', 'Bild wird links neben Text angezeigt.'], right: ['Rechts ausrichten', 'Bild wird rechts neben Text angezeigt']}
+      options: { none: [ Kein Bild, 'Der Inhalt nimmt die gesamte Breite der Seite ein.' ], left: [ 'Links ausrichten', 'Bild wird links neben Text angezeigt.' ], right: [ 'Rechts ausrichten', 'Bild wird rechts neben Text angezeigt' ] }
     text_area_image:
       label: 'Bild'
       commentAbove: 'Wenn Sie ein Bild zu diesem Inhalt hinzufügen möchtest, füge es bitte hier hinzu.'
