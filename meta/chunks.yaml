@@ -522,7 +522,7 @@ cta-4-simple:
       type: text
       span: right
     cust_attr:
-      label: 'Target URL'
+      label: 'Custom Attributes'
       type: text
       span: right
     style:
